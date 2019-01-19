@@ -1,0 +1,17 @@
+.center-block {
+height: 70vh;
+margin: 50px auto;
+
+}
+.field-text {
+  width: 400px;
+  height: 150px;
+}
+
+.form-table{
+  padding:50px;
+}
+
+.container {
+  margin: 50px;
+}

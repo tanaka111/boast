@@ -1,0 +1,43 @@
+<%= render partial: "header" %>
+
+<div class="container" style="height: 300px;">
+
+<form class="form-table" style="background-color: lightgray;">
+
+<!-- <div class="check-box">
+<label class="checkbox-inline"><input type="checkbox" value="">check 1</label>
+<label class="checkbox-inline"><input type="checkbox" value="">check 2</label>
+<label class="checkbox-inline"><input type="checkbox" value="" disabled="">check 3</label>
+</div> -->
+
+
+<%= form_for @post, :url => {:action => 'create'} do |f| %>
+  <div class="field" size="">
+    <%= f.label :text%>
+    <%= f.text_area :text, class: "field-text" %>
+  </div>
+
+  <div class="field">
+    <%=f.label :幸運 %>
+    <%=f.check_box :genre_id%>
+    <%=f.label :恋愛 %>
+    <%=f.check_box :genre_id%>
+    <%=f.label :日常 %>
+    <%=f.check_box :genre_id%>
+    <%=f.label :その他 %>
+    <%=f.check_box :genre_id%>
+  </div>
+
+  <div class= "action">
+    <%= f.submit %>
+  </div>
+
+
+
+</form>
+
+</div>
+
+<% end %>
+
+
