@@ -1,0 +1,12 @@
+.nav-link {
+  font-family: 'Impact',sans-serif;
+  font-size: 30px;
+}
+
+.logout-btn {
+    display: inline-block;
+    color: white;
+    line-height: 50px;
+    position: absolute;
+    right: 100px;
+}

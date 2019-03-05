@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-image: image-url("sora2.jpg");
+  background-size: cover;
+}
+ul {
+  list-style: none;
+}
