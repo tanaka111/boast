@@ -1,0 +1,15 @@
+<%= render partial: "header" %>
+
+
+    <div class="container">
+        <div class="jumbotron text-center">
+          <h1>Boastへようこそ!!</h1>
+          <h6>Boastは日常のちょっとした幸せから人に言えない自慢を匿名で投稿するサイトです</h6>
+          <h6>みんなの投稿を確認することと自慢に対していいねをすることもできます</h6>
+          <div class="btn">
+          <%= link_to "自慢する", new_post_path,class: "new-boast" %>
+          <%= link_to "みんなの自慢",posts_path,class: "show-boast" %>
+        </div>
+        </div>
+
+   </div>
