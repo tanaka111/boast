@@ -1,0 +1,21 @@
+<%= render partial: "header" %>
+
+<div class="container">
+
+<%= form_for @post,:html => {:class => "form-content"}  do |f| %>
+
+  <div class="field">
+    <%= f.label :text, "内容"%>
+    <%= f.text_area :text, size:"70x10" %>
+  </div>
+
+  <div class= "actions">
+    <%= f.submit "変更する",class: "change-btn",data: { confirm: "ほんまに変更するで？"}%>
+  </div>
+<% end %>
+
+</div>
+
+
+
+
