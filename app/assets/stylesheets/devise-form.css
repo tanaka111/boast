@@ -1,0 +1,53 @@
+.field {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.field-check {
+    position: relative;
+    right: 220px;
+    margin-bottom: 30px;
+}
+.field-label {
+  /*width: 50%;
+  position: relative;
+  right: 230px;*/
+}
+.field-frame {
+  width: 50%;
+  height: 50px;
+}
+
+.sign-up-btn {
+    padding: 10px;
+    background: blue;
+    color: white;
+    width: 50%;
+    border-radius: 20px;
+}
+
+.log-in-btn {
+    padding: 10px;
+    background: blue;
+    color: white;
+    width: 50%;
+    border-radius: 20px;
+}
+.other {
+    position: relative;
+    bottom: 300px;
+    left: 440px;
+    background: white;
+    width: 40%;
+}
+.forget-your-password {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.field-email {
+  width:330px;
+}
+.email-text {
+    position: relative;
+    right: 140px;
+}

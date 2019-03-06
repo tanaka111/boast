@@ -1,0 +1,9 @@
+.tab {
+overflow: hidden;
+margin: 0 auto;
+width: 50%;
+display: flex;
+}
+.tab li{background:#ccc; padding:5px 25px;margin-right:1px; width: 25%;}
+.tab li.select{background:#eee;}
+.hidden {display:none;}

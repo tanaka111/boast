@@ -1,0 +1,37 @@
+.form-content {
+      margin-top: 150px;
+      text-align: center;
+}
+
+.boast-btn {
+    background: #0062cc;
+    width: 150px;
+    height: 40px;
+    box-shadow: 0px 2px #c3b9b9;
+    color: white;
+}
+
+.boast-btn:active {
+    box-shadow: none;
+    position: relative;
+    top: 2px;
+}
+.change-btn {
+    background: #0062cc;
+    width: 150px;
+    height: 40px;
+    box-shadow: 0px 2px #c3b9b9;
+    color: white;
+}
+
+.change-btn:active {
+    box-shadow: none;
+    position: relative;
+    top: 2px;
+}
+
+.genres {
+    margin: 0 auto;
+    width: 20%;
+    height: 40px;
+}

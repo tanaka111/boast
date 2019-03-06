@@ -1,5 +1,6 @@
-<% @show.each do |show| %>
+<%= render partial: "header" %>
 
-<%= show.text %>
+<div class="container">
+  <%= render partial: 'posts/post', locals: { post: @post } %>
 
-<%end%>
+</div>

@@ -1,32 +1,51 @@
 class PostsController < ApplicationController
 
+# before_action :authenticated_user!
+
+  def title
+  @post = Post.new
+  end
+
   def index
-    @post = Post.all
+    @post = Post.order("id DESC").limit(8)
   end
 
   def new
     @post = Post.new
-    # binding.pry
   end
 
  def show
-  @post = Post.all
+  @post = Post.where(id: params[:id])
  end
 
 def create
   @post = Post.new(posts_params)
-  binding.pry
-  Post.create(text: posts_params[:text])
-  redirect_to action: :show
+  @post.save
+  redirect_to posts_path(@post)
+
 end
 
-def update
+def edit
+ @post = Post.find(params[:id])
+end
 
+
+def update
+  @post = Post.find(params[:id])
+  @post.update(posts_params)
+ redirect_to action: "index"
+end
+
+def destroy
+  post = Post.find(params[:id])
+  post.destroy
+  redirect_to action: "index"
 end
 
   private
     def posts_params
-    params.require(:post).permit(:text)
+      binding.pry
+    params.require(:post).permit(:text,:genre_id).merge(user_id: current_user.id)
   end
 
 end

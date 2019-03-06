@@ -1,0 +1,35 @@
+<ul class="tab">
+  <li class="select">幸運</li>
+  <li class="select2">日常</li>
+  <li class="select3">恋愛</li>
+  <li class="select4">その他</li>
+</ul>
+
+<% post.each do |p| %>
+
+<div class="card hidden active">
+
+    <div class= "card-head">
+      <p class="card-title">Boast</p>
+    </div>
+
+    <div class= "card-content">
+    <p class="card-text"><%= p.text %></p>
+
+
+    <div class= "card-function">
+      <% if p.user_id == current_user.id %>
+    <%= link_to "詳細", post_path(p.id),class: "detail-btn"%>
+    <%= link_to "編集",  edit_post_path(p),class: "edit-btn" %>
+    <%= link_to "削除", post_path(p.id),method: :delete,class: "delete-btn",data: { confirm: "ほんまに削除するで？"} %>
+    <% else %>
+    <%= link_to "詳細", post_path(p.id),class: "detail-btn"%>
+    <% end %>
+  </div>
+ </div>
+</div>
+
+<div class="card2 hidden">
+  <p>日常</p>
+  </div>
+<% end %>
