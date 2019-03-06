@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: boast_production
-  username: boast
-  password: <%= ENV['BOAST_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
