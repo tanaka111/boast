@@ -6,11 +6,48 @@
 // });
 
 $(function(){
-  $(".select2 ").on("click",function(){
-    $(".card2").addClass("active");
-    $(".card").removeClass("active");
+  $(".select").on("click",function(){
+  $(".is-active").removeClass("is-active");
+  $(this).addClass("is-active");
+  $(".cards.is-show").removeClass("is-show");
+  var index = $(this).index();
+  $(".cards").eq(index).addClass("is-show");
+  console.log(index);
+      });
   });
-});
+
+
+// $(".cards").each(function(index,element){
+//   $(".cards").addClass("is-show");
+//       });
+
+
+//日常がクリックされた時の動作
+// $(function(){
+//   $(".select2 ").on("click",function(){
+//     $(".card2").addClass("active");
+//     $(".card2").removeClass("hidden");
+//     $(".card").removeClass("active");
+//     $(".card").css("display","none");
+//     $(this).css("background","blue");
+//   });
+// //幸運がクリックされた時
+//   $(".select").on("click",function(){
+//     $(".card").css("display","block");
+//     $(".card2").css("display","none");
+//     $(".card3").css("display","none");
+//     $(".card4").css("display","none");
+//     $(this).css("background","blue");
+//   });
+
+//    $(".select3").on("click",function(){
+//     $(".card").css("display","none");
+//     $(".card2").css("display","none");
+//     $(".card3").css("display","block");
+//     $(".card4").css("display","none");
+//     $(this).css("background","blue");
+//   });
+// });
 
 
  // $(function(){
