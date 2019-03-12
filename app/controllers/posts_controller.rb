@@ -8,6 +8,7 @@ class PostsController < ApplicationController
 
   def index
     @post = Post.order("id DESC").limit(8)
+    @post_lucky = Post.where(genre_id: 0)
   end
 
   def new
