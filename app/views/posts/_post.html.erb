@@ -5,8 +5,8 @@
   <li class="select">その他</li>
 </ul>
 
-<% post.each do |p| %>
-<div class="cards is-show">
+<% post_lucky.each do |p| %>
+<div class="cards hidden active">
     <div class= "card-head">
       <p class="card-title">Boast</p>
     </div>
@@ -26,8 +26,10 @@
   </div>
  </div>
 </div>
+<% end %>
 
-<div class="cards">
+<% post_everyday.each do |p| %>
+<div class="cards hidden" >
   <div class= "card-head">
       <p class="card-title">Boast</p>
     </div>
@@ -47,8 +49,10 @@
   </div>
  </div>
 </div>
+<% end %>
 
-<div class="cards">
+<% post_love.each do |p| %>
+<div class="cards hidden" >
   <div class= "card-head">
       <p class="card-title">Boast</p>
     </div>
@@ -67,8 +71,10 @@
   </div>
  </div>
 </div>
+<% end %>
 
-  <div class="cards">
+<% post_other.each do |p| %>
+  <div class="cards hidden">
     <div class= "card-head">
       <p class="card-title">Boast</p>
     </div>

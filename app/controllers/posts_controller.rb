@@ -7,8 +7,11 @@ class PostsController < ApplicationController
   end
 
   def index
-    @post = Post.order("id DESC").limit(8)
+    # @post = Post.order("id DESC").limit(8)
     @post_lucky = Post.where(genre_id: 0)
+    @post_everyday = Post.where(genre_id: 1)
+    @post_love = Post.where(genre_id: 2)
+    @post_other = Post.where(genre_id: 3)
   end
 
   def new
@@ -16,7 +19,11 @@ class PostsController < ApplicationController
   end
 
  def show
-  @post = Post.where(id: params[:id])
+  # @post = Post.where(id: params[:id])
+  @post_lucky = Post.where(genre_id: 0,id: params[:id])
+  @post_everyday = Post.where(genre_id: 1,id: params[:id])
+  @post_love = Post.where(genre_id: 2,id: params[:id])
+  @post_other = Post.where(genre_id: 3,id: params[:id])
  end
 
 def create
@@ -45,7 +52,6 @@ end
 
   private
     def posts_params
-      binding.pry
     params.require(:post).permit(:text,:genre_id).merge(user_id: current_user.id)
   end
 
