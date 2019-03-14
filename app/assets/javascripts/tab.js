@@ -9,10 +9,9 @@ $(function(){
   $(".select").on("click",function(){
   $(".is-active").removeClass("is-active");
   $(this).addClass("is-active");
-  $(".cards.is-show").removeClass("is-show");
+  $(".cards.hidden.active").removeClass("active");
   var index = $(this).index();
-  $(".cards").eq(index).addClass("is-show");
-  console.log(index);
+  $(".cards.hidden").eq(index).addClass("active");
       });
   });
 
@@ -61,3 +60,17 @@ $(function(){
  //     $(".my-profile-container-all2").removeClass("active");
  //     $(".my-profile-purchase__content__data.hidden").removeClass("active");
  //   });
+
+
+
+
+
+ // $(function(){
+ //  $(".select").on("click",function(){
+ //  $(".is-active").removeClass("is-active");
+ //  $(this).addClass("is-active");
+ //  $(".cards.is-show").removeClass("is-show");
+ //  var index = $(this).index();
+ //  $(".cards").eq(index).addClass("is-show");
+ //      });
+ //  });

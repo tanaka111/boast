@@ -10,3 +10,11 @@
     position: absolute;
     right: 100px;
 }
+
+.newboast-btn {
+  display: inline-block;
+  color: white;
+  line-height: 50px;
+  position: absolute;
+  right: 200px;
+}

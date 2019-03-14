@@ -3,6 +3,7 @@
     <a class="nav-link active" href="http://localhost:3000/posts/new" style="color: white;">BOAST</a>
   </li>
   <% if user_signed_in? %>
+<p><%= link_to "自慢する", new_post_path,class: "newboast-btn" %></p>
 <p><%= link_to "ログアウト", destroy_user_session_path, method: :delete,class: "logout-btn" %></p>
 <% end %>
 </ul>

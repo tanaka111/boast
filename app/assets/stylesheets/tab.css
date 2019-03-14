@@ -12,8 +12,14 @@
 .tab li.select{
   background: white;
 }
-.cards {
+.tab li.select:hover {
+  background: rgba(10,10,100,0.2);
+}
+.cards.hidden {
 display: none;
+}
+.cards.hidden.active{
+  display: block;
 }
  .is-show {
   display: block;
